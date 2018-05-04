@@ -1,0 +1,468 @@
+
+@font-face{
+    font-family: 'Helvetica';
+    src: url('font/Helvetica.otf');
+}
+body{
+    width: 100%;
+    margin: 0;
+    font-size: 1.2em;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+}
+img{
+    width: 100%;
+}
+
+/* Header */
+.header{
+    width: 100%;
+    background: #09bab4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;  
+}
+.linkContainer{
+    width: 30%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.linkContainer a{
+    width: fit-content;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    padding: 2%;
+    margin: 0 2%;
+    font-size: 2em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.dropdown{
+    width: 20%;
+    height: 100%;
+    margin-right: 5%;
+    position: relative;
+}
+.dropdown:hover .dropdown__content{
+    display: block;
+}
+.dropdown a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 3%;
+}
+.dropdown__title{
+    font-size: 2em;
+    display: block;
+    text-align: right;
+}
+.dropdown__content{
+    position: absolute;
+    width: 70%;
+    text-align: right;
+    right: 0;
+    display: none;
+    background: rgba(95, 148, 144, 0.8);
+    z-index: 1;
+}
+.dropdown__content a{
+    display: block;   
+    width: 90%;
+    padding: 0;
+    padding: 5%;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.dropdown__content a:hover{
+    background: rgba(125, 178, 174, 0.8);
+}
+
+/* Nav */
+.nav{
+    width: 98%;
+    text-align: center;
+    background: rgb(95, 148, 144);
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav select{
+    width: 20%;
+    font-size: 1.5em;
+    margin: 0.2%;
+}
+.nav input{
+    width: 20%;
+    font-size: 1.4em;
+    margin: 0.2%;
+}
+.nav button{
+    font-size: 1.4em;
+}
+
+/* Main */
+.main{
+    min-height: 77.4vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.main--full{
+    min-height: 86.2vh;
+}
+.section__left{
+    width: 35%;
+    position: relative;
+    background: #98ebe6;
+    color: #000000;
+}
+.about__title{
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 30%; 
+    font-size: 4em;   
+}
+.section__title{
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 30%; 
+    font-size: 3em;
+}
+.about__text{
+    display: block;
+    width: 60%;
+    margin: 10% auto;
+    padding-bottom: 20%; 
+}
+
+.section__right{
+    width: 65%;
+    color: #000000;
+    background: #c3c3c3;
+}
+.login{
+    width: 65%;
+    background:  url('img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5%; 
+}
+.login__form{
+    width: 40%;
+}
+.login__content{
+    width: 100%;
+}
+.login__title{
+    font-size: 1.8em;
+}
+.input{
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+.login__link{
+    width: 80%;
+    color: #ffffff;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5%;
+    padding: 1.8%;
+    font-size: 1.4em;
+}
+.login__link--inscription{
+    border: 3px solid #ffffff;
+    margin-top: 20%;
+    border-radius: 20px;
+    background: rgba(0,0,0,0);
+}
+.login__link--connexion{
+    background: #09bab4;
+    width: 85%;
+    border: 3px solid #09bab4;
+    border-radius: 20px;
+    margin-bottom: 37.2%; 
+    cursor: pointer;
+}
+.info{
+    width: 60%;
+    margin: 2% auto;
+    position: relative;
+}
+.info__title{
+    margin: 1%;
+}
+.info__input{
+    width: 100%;
+    margin: 1%;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    font-size: 1.4em;
+    color:#ffffff;
+}
+.info__textBox{
+    width: 100%;
+    margin: 1%;
+    height: 200px;
+    font-size: 1.4em;
+}
+.button__container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+.info__cancel{
+    width: fit-content;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    background: #09bab4;
+    border: none;
+    border-radius: 10px;
+    padding: 1% 3%;
+    margin-right: 1%; 
+    cursor: pointer;
+}
+.info__submit{
+    width: fit-content;
+    display: block;
+    font-size: 1.5em;
+    color: #ffffff;
+    background: #09bab4;
+    border: none;
+    border-radius: 10px;
+    padding: 1% 3%;
+    cursor: pointer;
+}
+.info__supp{
+    position: absolute;
+    right: 0;
+    width: fit-content;
+    display: block;
+    color: #ffffff;
+    background: #09bab4;
+    text-decoration: none;
+    padding: 1% 3%;
+    border-radius: 10px;
+    bottom: 1%;
+} 
+.section--full{
+    width: 100%;
+    min-height: 77.4vh;
+}
+/* Footer */
+.footer{
+    position: static;
+    width: 100%;
+    bottom: 0;
+    background: #3d3d3d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Patient */
+.btn__choice{
+    width: 20%;;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-left: 5%;
+    background: aqua;
+    color: #000000;
+    text-decoration: none;
+    padding: 0 2%;
+    border: 2px solid #909090;
+    border-radius: 30px;
+    cursor: pointer;
+    position: fixed;
+    margin-top: 10%;
+}
+.btn__choice:nth-child(1){
+    margin-top: 100px;
+}
+.btn__choice:nth-child(2){
+    margin-top: 200px;
+}
+.btn__choice:nth-child(3){
+    margin-top: 300px
+}
+.user__container{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.user{
+    width: 15%;
+    position: relative;
+    margin: 1.5%;
+    padding: 1%;
+    background: #e3e3e3;
+}
+.user__name{
+    margin-top: 12%;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.bold{
+    font-weight: bold;
+}
+.user__btn{
+    font-size: 1.2em;
+    width: 10%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.user__btn--modify{
+    right: 60px;
+}
+
+/* Contact */
+.contact__comboBox{
+    display: block;
+    margin: 2% auto;
+    font-size: 1.5em;
+}
+.contact__textBox{
+    display: block;
+    margin: 5% auto;
+    margin-bottom: 0;
+    width: 50%;
+    height: 500px;
+    font-size: 1.5em;
+}
+.contact__submit{
+    margin: 2% auto;
+}
+/* Contact - admin */
+.admin__section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+.admin__section__title{
+    display: block;
+    width: 90%;
+    padding-left: 10%;
+    font-size: 1.8em;
+}
+.admin__section__title::after{
+    content: "";
+    display: block;
+    background: #000000;
+    width: 90%;
+    height: 2px;
+}
+.admin__article{
+    position: relative;
+    width: 20%;
+    display: block;
+    margin: 1.5%;
+    padding: 1%;
+    background: #e3e3e3;
+}
+.traite{
+    background: #3d3d3d;
+}
+
+/* Service */
+.service{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.service__section__title{
+    display: block;
+    width: 90%;
+    padding-left: 10%;
+    font-size: 1.8em;
+}
+.service__section__title::after{
+    content: "";
+    display: block;
+    background: #000000;
+    width: 90%;
+    height: 2px;
+}
+.add__choix{
+    font-size: 1.8em;
+    display: block;
+    width: fit-content;
+    margin: 2% auto;
+}
+.service__comboBox{
+    display: block;
+    margin: 2% auto;
+    font-size: 1.5em;
+}
+.titulaire{
+    background: #ffffff;
+}
+
+/* Agenda */
+.seance__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+.seance{
+    width: 15%;
+    position: relative;
+    margin: 1.5%;
+    padding: 1%;
+    background: #e3e3e3;
+}
+.seance--add{
+    margin: auto;
+    background: none;
+    width: 5%;
+    position: relative;
+}
+.seance__patient{
+    margin-top: 30px;
+}
+.seance__date{
+    width: 100%;
+    margin-left: 5%;
+    align-self: flex-start;
+}
+
+/* ERREUR */
+.red{
+    color: red;
+}
+.hidden{
+    display: none;
+}
