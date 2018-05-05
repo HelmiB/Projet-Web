@@ -65,30 +65,26 @@ if (isset($_SESSION['user']))
 
             <!----------------   Panel Body Start   --------------->
             <div class="panel-body">
-
                 <form class="navbar-form pull-right" action="departement.php" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Rechercher..." name="search" >
                     </div>
                     <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
                 </form>
-                <br/> <br/> <br/>
 
-
-
-                <!----------------   Affichage Tableau commence ici   --------------->
-                                <ul class="nav nav-tabs">
+                <br>
+                <ul class="nav nav-tabs">
                     <li id="button1"><a class="active"  href="#"><strong>Liste Des Departements</strong></a></li>
-                    <li id="button2"><a href="ajouterdepartement.php" ><strong>Ajouter Departement</strong></a></li>
+                    <li id="button2"><a href="ajouterdepartement.php" ><strong>Ajouter Departement &nbsp  &nbsp </strong></a></li>
                 </ul>
                  <table class="table table-bordered table-hover" id="myTable">
                     <tr class="active">
-                          <td width="160"><strong>Département ID </strong> <button class="btn btn-link" style="alignment:right" onclick="sortTable(0)" ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
+                          <td width="190"><strong>Département ID </strong> <button class="btn btn-link" style="alignment:right" onclick="sortTable(0)" ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
                         </td>
-                        <td width="180"><strong>Nom Département </strong><button class="btn btn-link" style="alignment:right" onclick="sortTable(1)"  ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
+                        <td width="190"><strong>Nom Département </strong><button class="btn btn-link" style="alignment:right" onclick="sortTable(1)"  ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
                         </td>
                         <td><strong>Description Département</strong> </td>
-                        <td width="150" style="text-align:center"><strong>Modifier</strong></td>
+                        <td width="100" style="text-align:center"><strong>Modifier</strong></td>
                     </tr>
                     <?php
                     $_bdd= db_connect();

@@ -96,8 +96,11 @@ if (isset($_SESSION['user']))
                     </div>'
                 ?>
 
-
-
+                <br>
+                <ul class="nav nav-tabs">
+                    <li id="button1"><a class="active"  href="departement.php"><strong>Liste Des Departements</strong></a></li>
+                    <li id="button2"><a href="#" ><strong>Ajouter Departement &nbsp  &nbsp </strong></a></li>
+                </ul>
 
                 <!----------------   Add Department Start   --------------->
 
