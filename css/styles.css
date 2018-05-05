@@ -1,0 +1,24 @@
+.sidenav {
+	background-image: url(2.jpg);
+	height: 700px;
+}
+
+.contenu{
+
+	background-color: whitesmoke;
+	background-size:100%;
+	background-scroll:fixed;
+	height:700px;
+}
+
+.glyphicon.glyphicon-log-out {
+	font-size: 17px;
+	color: white;
+}
+
+.deconnexion {
+	color: white;
+	font-family: "Arial Unicode MS";
+
+
+
