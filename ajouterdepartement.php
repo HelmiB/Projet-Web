@@ -71,7 +71,7 @@ if (isset($_SESSION['user']))
                 <li ><a href="indexPatient.php">&nbsp Patients </a></li>
                 <li><a href="medecin.php">&nbsp Docteurs</a></li>
                 <li class="active"><a href="departement.php">&nbsp Départements</a></li>
-                <li><a href="chambre.php">&nbsp Lits</a></li>
+                <li><a href="chambre.php">&nbsp Chambres</a></li>
             </ul>
         </div>
 
@@ -81,7 +81,7 @@ if (isset($_SESSION['user']))
         <br> <br>
         <!-----------  Content Menu Tab Start   ------------>
         <div class="panel panel-info contentinside">
-            <div class="panel-heading">Gestion de département</div>
+            <div class="panel-heading"><strong>Gestion de département</strong></div>
 
             <!----------------   Panel Body Start   --------------->
             <div class="panel-body">

@@ -24,7 +24,6 @@ if (isset($_SESSION['user']))
 <body>
 
 <!--- Header starts --------->
-
 <div class="row header" style="background-color:rgb(51,122,183)">
     <nav class="navbar navbar-expand-sm  navbar-dark ">
         <div class="col-md-10 container-fluid">
@@ -52,7 +51,7 @@ if (isset($_SESSION['user']))
                 <li ><a href="indexPatient.php">&nbsp Patients </a></li>
                 <li><a href="medecin.php">&nbsp Docteurs</a></li>
                 <li class="active"><a href="departement.php">&nbsp Départements</a></li>
-                <li><a href="chambre.php">&nbsp Lits</a></li>
+                <li><a href="chambre.php">&nbsp Chambres</a></li>
             </ul>
         </div>
 
@@ -62,12 +61,11 @@ if (isset($_SESSION['user']))
         <br> <br>
         <!-----------  Content Menu Tab Start   ------------>
         <div class="panel panel-info contentinside">
-            <div class="panel-heading">Gestion de département</div>
+            <div class="panel-heading"><strong>Gestion de département</strong></div>
 
             <!----------------   Panel Body Start   --------------->
             <div class="panel-body">
 
-                <button type="button" class="btn btn-primary" onclick="window.location.href='ajouterdepartement.php'"><span class="glyphicon glyphicon-plus" aria-hidden="true"> </span> Nouveau département</button>
                 <form class="navbar-form pull-right" action="departement.php" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Rechercher..." name="search" >
@@ -79,14 +77,18 @@ if (isset($_SESSION['user']))
 
 
                 <!----------------   Affichage Tableau commence ici   --------------->
-                <table class="table table-bordered table-hover" id="myTable">
+                                <ul class="nav nav-tabs">
+                    <li id="button1"><a class="active"  href="#"><strong>Liste Des Departements</strong></a></li>
+                    <li id="button2"><a href="ajouterdepartement.php" ><strong>Ajouter Departement</strong></a></li>
+                </ul>
+                 <table class="table table-bordered table-hover" id="myTable">
                     <tr class="active">
-                        <td width="160">Département ID  <button class="btn btn-link" style="alignment:right" onclick="sortTable(0)" ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
+                          <td width="160"><strong>Département ID </strong> <button class="btn btn-link" style="alignment:right" onclick="sortTable(0)" ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
                         </td>
-                        <td width="180">Nom Département <button class="btn btn-link" style="alignment:right" onclick="sortTable(1)"  ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
+                        <td width="180"><strong>Nom Département </strong><button class="btn btn-link" style="alignment:right" onclick="sortTable(1)"  ><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
                         </td>
-                        <td>Description Département </td>
-                        <td width="150" style="text-align:center">Modifier</td>
+                        <td><strong>Description Département</strong> </td>
+                        <td width="150" style="text-align:center"><strong>Modifier</strong></td>
                     </tr>
                     <?php
                     $_bdd= db_connect();
@@ -126,7 +128,7 @@ if (isset($_SESSION['user']))
                     //$('input#description').val(data3);
                 }
             </script>
-            <script>
+  <script>
                 function sortTable(n) {
                     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
                     table = document.getElementById("myTable");
@@ -170,8 +172,6 @@ if (isset($_SESSION['user']))
                     }
                 }
             </script>
-
-
             <!----------------   Display Department Data List ends   --------------->
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog" >
@@ -230,8 +230,10 @@ if (isset($_SESSION['user']))
         <!----------------   Panel Body Ends   --------------->
     </div>
     <!-----------  Content Menu Tab Ends   ------------>
+
+    
 </div>
-    <!-------   Content Area Ends  --------->
+<!-------   Content Area Ends  --------->
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
